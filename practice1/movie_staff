@@ -1,0 +1,16 @@
+ m1 d1 a1 a2 a3 a4
+ m2 d2 a3 a2 a4 a5
+ m3 d3 a1 a5 a3 a6
+ m4 d1 a1 a4 a3 a7
+ m5 d2 a1 a2 a3 a8
+ m6 d3 a5 a7 a3 a9
+ m7 d4 a1 a4 a6 a7
+ m8 d1 a1 a4 a3 a8
+ m9 d2 a5 a4 a3 a9
+ m10 d3 a1 a4 a5 a10
+ m11 d1 a1 a4 a3 a11
+ m12 d2 a7 a4 a9 a12
+ m13 d3 a1 a7 a3 a13
+ m14 d4 a10 a4 a9 a14
+ m15 d5 a1 a8 a11 a15
+ m16 d6 a14 a4 a13 a16

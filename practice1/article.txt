@@ -1,0 +1,37 @@
+﻿aims
+Entropy, an international and interdisciplinary journal of entropy and information studies, publishes reviews, regular research papers and short notes. Our aim is to encourage scientists to publish as much as possible their theoretical and experimental details. There is no restriction on the length of the papers. If there are computation and the experiment, the details must be provided so that the results can be reproduced. There are in addition three unique features:
+
+Manuscripts regarding research proposals and research ideas will be particularly welcome.
+Comments on any related papers published in this journal and other journals can be published as short letters.
+Electronic files regarding the full details of the calculation and experimental procedure, if unable to be published in a normal way, will be deposited as supplementary material.
+Scope
+Entropy deals with the development and/or application of entropy or information-theoretic concepts in a wide variety of applications. Relevant submissions ought to focus on one of the following:
+
+develop the theory behind entropy or information theory
+provide new insights into entropy or information-theoretic concepts
+demonstrate a novel use of entropy or information-theoretic concepts in an application
+obtain new results using concepts of entropy or information theory
+Some Common Subject or Application Areas include:
+
+Physics and Engineering: thermodynamics, statistical mechanics, the second law of thermodynamics, reversibility, quantum mechanics, black hole physics, maximum entropy methods, maximum entropy production, evolution of the universe
+Information Theory: Shannon entropy, Kullback-Leibler divergence, channel capacity, Renyi and other entropies, and applications
+Complex Systems: self-organization, chaos and nonlinear dynamics, simplicity and complexity, networks, symmetry breaking, similarity
+Inquiry: experimental design, database querying, sensor placement, intelligent sampling
+Computing: big data, database design and querying, networks, cloud computing, pattern recognition, coding and compression, information transfer, reversibility, information loss, social networking
+Chemistry and Biology: chemical networks, energy, enthalpy, maximum entropy methods, biological networks, evolution, DNA and RNA, diversity
+Machine Learning and Systems Theory: artificial intelligence, neural networks, cybernetics, robotics, man-machine interfaces
+Economics: thermoeconomics, info-metrics, maximum entropy methods, game theory
+Journal History
+MDPI Entropy History
+
+MDPI Publication Ethics Statement
+Entropy is a member of the Committee on Publication Ethics (COPE). MDPI takes the responsibility to enforce a rigorous peer-review together with strict ethical policies and standards to ensure to add high quality scientific works to the field of scholarly publication. Unfortunately, cases of plagiarism, data falsification, inappropriate authorship credit, and the like, do arise. MDPI takes such publishing ethics issues very seriously and our editors are trained to proceed in such cases with a zero tolerance policy. To verify the originality of content submitted to our journals, we use iThenticate to check submissions against previous publications. MDPI works with Publons to provide reviewers with credit for their work.
+
+Book Reviews
+Authors and publishers are encouraged to send review copies of their recent related books to the following address. Received books will be listed as Books Received within the journal's News & Announcements section.
+MDPI
+Reprints
+Reprints may be ordered. Please contact  for more information on how to order reprints.
+
+Announcement and Advertisement
+Announcements regarding academic activities such as conferences are published for free. Advertisement can be either published or placed on the pertinent website. For further information, please contact the editoria
