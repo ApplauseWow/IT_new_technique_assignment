@@ -4,6 +4,7 @@
 from bs4 import BeautifulSoup
 import re
 import requests
+import pandas as pd
 
 
 # 获取网页源码
@@ -53,17 +54,36 @@ def get_stock_info(slist, stock_info_url, output_file):
     """
 
     count = 0
+    today = []  # 今开
+    auction = []  # 成交量
+    max_ = []  # 最高
+    stop = []  # 涨停
     for stock_code in slist:
-        count += 1  # 进度条
         # 组成URL
-        stock_info_html = get_html("".join((stock_info_url, stock_code, '.html')))
-
+        url = "".join((stock_info_url, stock_code, '.html'))
+        stock_info_html = get_html(url)
+        try:
+            soup = BeautifulSoup(stock_info_html, 'html.parser')
+            div = soup.find_all('div', class_="line1")[0]  # 寻找匹配标签, find_all返回ResultSet
+            list(map(lambda x, y: x.append(y.text), [today, auction, max_, stop], div.find_all('dd')[:5]))
+            count += 1
+            print("\r当前进度: {:.2f}%".format(count * 100 / len(slist)), end="")
+        except:
+            count += 1
+            print("\r当前进度: {:.2f}%".format(count * 100 / len(slist)), end="")
+            continue
+    column_today = pd.Series(today, name='today')
+    column_auction = pd.Series(auction, name='auction')
+    column_max = pd.Series(max_, name='max')
+    column_stop = pd.Series(stop, name='stop')
+    save = pd.DataFrame({'today': column_today, 'auction': column_auction, 'max': column_max, 'stop': column_stop})
+    save.to_csv(output_file, index=False, sep=' ')
 
 
 if __name__ == '__main__':
     stock_list_url = 'http://quote.stockstar.com/stock/stock_index.html'
-    stock_info_url = 'gupiao.baidu.com/stock/'
+    stock_info_url = 'http://gupiao.baidu.com/stock/'
     slist = []  # 股票代码列表
-    file_path = './stocks.txt'  # 输出文件路径
+    file_path = 'stocks.csv'  # 输出文件路径
     get_stock_list(slist, stock_list_url)  # 获取股票代码
     get_stock_info(slist, stock_info_url, file_path)  # 爬取股票信息
