@@ -11,4 +11,12 @@ import scrapy
 class BaidustockItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    id = scrapy.Field()
+    today = scrapy.Field()
+    auction = scrapy.Field()
+    max_ = scrapy.Field()
+    stop = scrapy.Field()
+
+
+class IPLocationItem(scrapy.Item):
+    ip_location = scrapy.Field()

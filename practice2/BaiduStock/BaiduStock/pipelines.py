@@ -4,12 +4,25 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import json
 
 
 class BaidustockPipeline(object):
+
+    def close_spider(self, spider):
+        self.file.close()
+
+    def open_spider(self, spider):
+        self.file = open('stockInfo.txt', 'w')
+
     def process_item(self, item, spider):
+        content = json.dumps(dict(item), ensure_ascii=False) + '\n'
+        self.file.write(content)
         return item
 
+class IPLocationPipeline(object):
 
-class BaidustockInfoPipeline(object):
+    def process_item(self, item, spider):
+        print(item['ip_location'])
+        return item
 

@@ -1,6 +1,6 @@
 # -*-coding:utf-8-*-
 # created by HolyKwok 201610414206
-# 百度股票爬虫
+# 百度股票爬虫和IP地址归属地自主查询
 from bs4 import BeautifulSoup
 import re
 import requests
@@ -80,10 +80,32 @@ def get_stock_info(slist, stock_info_url, output_file):
     save.to_csv(output_file, index=False, sep=' ')
 
 
+def find_host_location(ip):
+    """
+    IP地址归属地自主查询
+    :param url: ip 或者 域名
+    :return: a dict of location information
+    """
+
+    url = "".join(("http://m.ip138.com/ip.asp?ip=", ip))
+    html = get_html(url)
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        p = soup.find_all("p", class_="result")
+        return p
+    except:
+        print("no result...")
+
+
 if __name__ == '__main__':
-    stock_list_url = 'http://quote.stockstar.com/stock/stock_index.html'
-    stock_info_url = 'http://gupiao.baidu.com/stock/'
-    slist = []  # 股票代码列表
-    file_path = 'stocks.csv'  # 输出文件路径
-    get_stock_list(slist, stock_list_url)  # 获取股票代码
-    get_stock_info(slist, stock_info_url, file_path)  # 爬取股票信息
+    # 股票信息
+    # stock_list_url = 'http://quote.stockstar.com/stock/stock_index.html'
+    # stock_info_url = 'http://gupiao.baidu.com/stock/'
+    # slist = []  # 股票代码列表
+    # file_path = 'stocks.csv'  # 输出文件路径
+    # get_stock_list(slist, stock_list_url)  # 获取股票代码
+    # get_stock_info(slist, stock_info_url, file_path)  # 爬取股票信息
+
+    # ip地址归属地
+    location = find_host_location('www.applausewow.cn')
+    print(location[0].text)

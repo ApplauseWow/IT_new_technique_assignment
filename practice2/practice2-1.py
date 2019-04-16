@@ -45,8 +45,8 @@ months = list(range(1, 13))
 # plt.close()
 pm2d5_y_avg = []  # pm2.5各年平均值
 temp_y_avg = []  # 气温各年平均值
-list(map(pm2d5_y_avg.append, list(map(lambda x: data.loc(data['year'] == x)['pm2.5'].mean(), years))))
-list(map(temp_y_avg.append, list(map(lambda x: data.loc(data['year'] == x)['TEMP'].mean(), years))))
+list(map(pm2d5_y_avg.append, list(map(lambda x: data.loc[data['year'] == x]['pm2.5'].mean(), years))))
+list(map(temp_y_avg.append, list(map(lambda x: data.loc[data['year'] == x]['TEMP'].mean(), years))))
 # 画图
 font = FontProperties(fname="C:\Windows\Fonts\msyh.ttc", size=15)  # 设置字体
 index = np.arange(len(years))
